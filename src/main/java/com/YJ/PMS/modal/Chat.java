@@ -18,11 +18,17 @@ public class Chat {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    public Long getId() {
+        return id;
+    }
 
     private String name;
 
     @OneToOne
     private Project project;
+    public void setProject(Project project) {
+        this.project = project;
+    }
 
     @JsonIgnore
     @OneToMany(mappedBy = "chat",cascade = CascadeType.ALL,orphanRemoval = true)
@@ -30,4 +36,7 @@ public class Chat {
 
     @ManyToMany
     private List<User> users = new ArrayList<>();
+    public List<User> getUsers() {
+        return users;
+    }
 }

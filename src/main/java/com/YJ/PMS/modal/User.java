@@ -14,6 +14,12 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    public Long getId() {
+        return id;
+    }
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
 
     private String fullName;
     public String getFullName() {
@@ -41,6 +47,11 @@ public class User {
     @OneToMany(mappedBy = "assignee",cascade = CascadeType.ALL)
     private List<Issue> assignedIssues = new ArrayList<>();
     private int projectSize;
-
+    public int getProjectSize() {
+        return projectSize;
+    }
+    public void setProjectSize(int projectSize) {
+        this.projectSize = projectSize;
+    }
 
 }

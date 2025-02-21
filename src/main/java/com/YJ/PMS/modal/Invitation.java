@@ -19,7 +19,22 @@ public class Invitation {
     private Long id;
 
     private String token;
+    public String getToken() {
+        return token;
+    }
+    public void setToken(String token) {
+        this.token = token;
+    }
     private String email;
+    public void setEmail(String email) {
+        this.email = email;
+    }
     private Long ProjectId;
+    public Long getProjectId() {
+        return ProjectId;
+    }
+    public void setProjectId(Long projectId) {
+        this.ProjectId = ProjectId;
+    }
 
 }

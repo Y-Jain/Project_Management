@@ -1,13 +1,15 @@
 package com.YJ.PMS.service;
-
+import org.springframework.stereotype.Service;
 import com.YJ.PMS.modal.PlanType;
 import com.YJ.PMS.modal.Subscription;
 import com.YJ.PMS.modal.User;
 import com.YJ.PMS.repository.SubscriptionRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDate;
 
+@Service
 public class SubscriptionServiceImpl implements SubscriptionService{
 
     @Autowired
